@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #373d4c;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: scroll;
+}
+/* .app:before {
+  content:"";
+  background-color:#000;
+  position: absolute;
+  height: 100%;
+  width: 200vw;
+  left: -100vw;
+  z-index: -1;
+} */
+
+.app-userInfo {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.app-changeNameInput {
+  height: 30px;
+  width: 20vw;
+}
+
+.app-changeNameButton {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+}

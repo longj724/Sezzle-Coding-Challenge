@@ -1,0 +1,14 @@
+.keypad-outline {
+  height: 45vh;
+  width: 100%;
+}
+
+.keypad-container {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}

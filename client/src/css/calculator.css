@@ -1,0 +1,20 @@
+.calculator-container {
+  width: 25vw;
+  height: 70vh;
+  background-color: white;
+  margin: 10vh 10vw 0vh 10vw;
+  float: right;
+  border-radius: 10px;
+}
+
+@media (max-width: 1280px) {
+  .calculator-container {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .calculator-container {
+    width: 40vw;
+  }
+}

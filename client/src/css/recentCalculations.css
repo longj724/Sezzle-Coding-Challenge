@@ -1,0 +1,40 @@
+.recentCalculations-calculation {
+  background-color: #fff;
+  width: 40vw;
+}
+
+.recentCalculations-title {
+  margin-top: 25px;
+  color: #fff;
+}
+
+.recentCalculations-list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.recentCalculations-listItem {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.recentCalculations-content {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.recentCalculations-name {
+  word-break: break-all;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}

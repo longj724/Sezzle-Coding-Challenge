@@ -1,0 +1,25 @@
+.button-key {
+  background-color: #DEEEF7;
+  border: 3px solid #DEEEF7;
+  border-radius: 10px;
+  font-size: 2rem;
+  color: #454545;
+}
+
+button:hover {
+  background-color: #CDE5F3;
+}
+
+.button-zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.button-operation {
+  background-color: #52C9DC;
+  border: 3px solid #52C9DC;
+}
+
+.button-operation:hover {
+  background-color: #34C0D5;
+}
