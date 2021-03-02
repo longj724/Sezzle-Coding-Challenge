@@ -22,9 +22,6 @@ io.on('connection', (socket) => {
   });
 
   socket.on('calculation', (message) => {
-    console.log('Eq is:', message.equation);
-    console.log('Result is:', message.result);
-    console.log('Calc is from:', message.name);
     io.emit('display-calculation', {
       equation: message.equation,
       result: message.result,

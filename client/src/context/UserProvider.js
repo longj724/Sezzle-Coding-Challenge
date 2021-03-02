@@ -22,9 +22,18 @@ function UserProvider({ children }) {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    const socket = io('http://localhost:5000/', {
-      withCredentials: true,
-    });
+    let socket = undefined;
+
+    // If in production
+    if (process.env.NODE_ENV === 'production') {
+      socket = io({
+        withCredentials: true,
+      });
+    } else {
+      socket = io(process.env.REACT_APP_SERVER_PORT, {
+        withCredentials: true,
+      });
+    }
 
     const randomName = uniqueNamesGenerator({
       dictionaries: [adjectives, colors, animals],
