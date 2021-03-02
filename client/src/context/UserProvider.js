@@ -35,16 +35,22 @@ function UserProvider({ children }) {
       });
     }
 
-    const randomName = uniqueNamesGenerator({
-      dictionaries: [adjectives, colors, animals],
-    });
+    let name = localStorage.getItem('name');
 
-    setUser({ name: randomName, socket: socket });
+    // Generate random name if no name exists
+    if (name === null) {
+      name = uniqueNamesGenerator({
+        dictionaries: [adjectives, colors, animals],
+      });
+    }
+
+    setUser({ name: name, socket: socket });
 
     return () => socket.close();
   }, []);
 
   const changeName = (name) => {
+    localStorage.setItem('name', name);
     setUser({ ...user, name: name });
   };
 
