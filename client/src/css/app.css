@@ -22,15 +22,6 @@ code {
   grid-template-columns: 1fr 1fr;
   overflow-y: scroll;
 }
-/* .app:before {
-  content:"";
-  background-color:#000;
-  position: absolute;
-  height: 100%;
-  width: 200vw;
-  left: -100vw;
-  z-index: -1;
-} */
 
 .app-userInfo {
   padding-top: 50px;

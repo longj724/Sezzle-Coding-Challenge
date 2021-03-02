@@ -55,8 +55,6 @@ function CalculationProvider({ children }) {
   useEffect(() => {
     const calculations = JSON.parse(localStorage.getItem('calcList'));
 
-    console.log('here')
-
     // Check for calculations in local storage
     if (calculations !== null) {
       setCalcList(calculations);
@@ -66,8 +64,6 @@ function CalculationProvider({ children }) {
   // Setup socket to receive calculations
   useEffect(() => {
     if (user === undefined || user['socket'] === undefined) return;
-
-    console.log('setting up the user');
 
     user['socket'].on('display-calculation', addCalculationToList);
 
@@ -84,13 +80,11 @@ function CalculationProvider({ children }) {
       const newCalc = curCalc.slice(0, -1);
       setCurCalc(newCalc);
     } else if (symbol === '=') {
-      console.log(curCalc);
       try {
         const result = evaluate(curCalc).toString();
         sendCalculation(curCalc, result);
         setCurCalc(result);
       } catch (error) {
-        console.log(error);
         setCurCalc('Syntax Error');
       }
     } else {
